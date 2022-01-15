@@ -1,6 +1,8 @@
 
 /* BASIC */
-
+.form-group{
+  margin: 2%;
+}
 html {
     background-color: #ffffff;
   }
