@@ -1,0 +1,61 @@
+<nav class="navbar navbar-light bg-light">
+    <form class="container-fluid justify-content-start">
+      <button class="btn btn-sm btn-outline-danger" type="button" (click)="inicio()">Sallir</button>
+    </form>
+  </nav>
+<div class="wrapper ">
+    <div id="formContent">
+        <div class="container mb-5 mt-3">
+            <h1 class="title text-center">Restaurante Delimas</h1>
+            
+            <div id="formContent">
+                <div>
+                    <br>
+                    <h3 class="title text-center">Pedidos</h3>
+                </div>
+
+                <div class="text-center">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                          <th scope="col">id</th>
+                          <th scope="col">total</th>
+                          <th scope="col">estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let pedido of pedidos; index as i">
+                          <td>
+                            {{ pedido.id | number }}
+                          </td>
+                          <td>{{ pedido.total | number }}</td>
+                          <td><button type="button bt" class="btn btn-outline-info" (click)="cambiar_estado(i)">{{ pedido.estado }}</button></td>
+                          <td><button type="button bt" class="btn btn-outline-secondary" (click)="ver_estado(i)">Ver Estado</button></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div>
+      <label for="formGroupExampleInput" class="form-label">Pedido realizado a:  </label>
+      <p></p>
+      <label for="formGroupExampleInput" class="form-label" style="color: cornflowerblue;"> {{url}}</label>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="ft">
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-dark" >Grupo F - SA diciembre 2021</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
+<!-- Footer -->

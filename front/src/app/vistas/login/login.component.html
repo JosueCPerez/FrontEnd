@@ -1,0 +1,46 @@
+<html>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <br>
+      <img src="https://vive-sano.org/wp-content/uploads/2018/12/Logo-delimas.png" id="icon" alt="User Icon" />
+      <br>
+    </div>
+
+    <!-- Login Form -->
+    <div class="botones">
+      <input type="submit" class="fadeIn fourth" value="Cliente" (click)="ir_cliente()">
+      <input type="submit" class="fadeIn fourth" value="Restaurante" (click)="ir_restaurante()">
+      <input type="submit" class="fadeIn fourth" value="Entrega" (click)="ir_entrega()">
+    </div>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover">Practica 2 - Gupo F</a>
+    </div>
+
+    
+  
+  </div>
+</div>
+
+<div class="col text-center">
+  <div ngbDropdown placement="top-right" class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Ejecutar con</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button ngbDropdownItem (click)="tipo_ejecucion(1)">Orquestacion</button>
+      <button ngbDropdownItem (click)="tipo_ejecucion(2)">Coreografia</button>
+    </div>
+  </div>
+</div>
+
+
+</html>

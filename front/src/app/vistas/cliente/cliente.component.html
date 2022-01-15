@@ -1,0 +1,176 @@
+<nav class="navbar navbar-light bg-light">
+    <form class="container-fluid justify-content-start">
+      
+      
+        <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+          aria-controls="collapseExample">
+          Ver carrito
+        </button>
+      
+      <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+        <div class="card">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Menu</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Precio unitario</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let producto of carrito; index as i">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>
+                    {{ producto.nombre }}
+                  </td>
+                  <td>{{ producto.cantidad | number }}</td>
+                  <td>{{ producto.precio | number }}</td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+      <button class="btn btn-sm btn-outline-danger" type="button" (click)="inicio()">Sallir</button>
+    </form>
+  </nav>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+    <div class="container mb-5 mt-3">
+        <h1 class="title text-center">Menú</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mt-3">
+                    <div class="product-1 align-items-center p-2 text-center">
+                        <div class="image-container"> <img class="xyz rounded" src="https://www.hola.com/imagenes/cocina/recetas/20200205159814/alitas-de-pollo-a-la-americana-buffalo-wings/0-778-671/aitas-de-pollo-a-la-americana-o-buffalo-wings-m.jpg"  width="200"> <img class="xyz-replacement rounded" src="https://www.hola.com/imagenes/cocina/recetas/20200205159814/alitas-de-pollo-a-la-americana-buffalo-wings/0-778-671/aitas-de-pollo-a-la-americana-o-buffalo-wings-m.jpg" width="200"> </div>
+                        <h5>Alitas de pollo</h5>
+                        <div class="mt-3 info"> <span class="text1 d-block">10 alitas de pollo bañadas en salsa BBQ</span> </div>
+                        <div class=" tshirtcost mt-3 text-dark"> <span>Q115</span>
+                            <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                        </div>
+                    </div>
+                    <div class=" tshirt p-3 text-center text-white mt-3 cursor cart"> <span class="text-uppercase cart-text" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="guardar_temp('Alitas de pollo',115)">Add to cart</span> </div>
+                    </div>
+            </div>
+            <div class=" col-md-4">
+                <div class="card mt-3">
+                    <div class="product-1 align-items-center p-2 text-center">
+                        <div class="image-container"> <img class="xyz rounded" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/08/hamburguesa-2028707.jpg?itok=ujl3qgM9" width="200" height="200"> <img class="xyz-replacement rounded" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/08/hamburguesa-2028707.jpg?itok=ujl3qgM9" width="200" height="200"> </div>
+                        <h5>Hamburguesa Clasica con Queso</h5>
+                        <div class="mt-3 info"> <span class="text1 d-block">Menu de hamburguesa con queso, papas y agua.</span> </div>
+                        <div class=" tshirtcost mt-3 text-dark"> <span>Q50</span>
+                            <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                        </div>
+                    </div>
+                    <div class=" tshirt p-3 text-center text-white mt-3 cursor cart"> <span class="text-uppercase cart-text" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="guardar_temp('Hamburguesa con Queso',50)">Add to cart</span> </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-3">
+                    <div class="product-1 align-items-center p-2 text-center">
+                        <div class="image-container"> <img class="xyz rounded" src="https://pc-gt-cdn.s3.amazonaws.com/menu-images/prod-a/270a7d7d-1a28-4e3a-9351-a1c0735bccf6.png" width="200" height="200"> <img class="xyz-replacement rounded" src="https://pc-gt-cdn.s3.amazonaws.com/menu-images/prod-a/270a7d7d-1a28-4e3a-9351-a1c0735bccf6.png" width="200" height="200"> </div>
+                        <h5>Tazon de enzalada</h5>
+                        <div class="mt-3 info"> <span class="text1 d-block">Tazon de enzalada</span>  </div>
+                        <div class=" tshirtcost mt-3 text-dark"> <span>Q50</span>
+                            <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                        </div>
+                    </div>
+                    <div class=" tshirt p-3 text-center text-white mt-3 cursor cart"> <span class="text-uppercase cart-text" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="guardar_temp('Tazon de enzalada',50)">Add to cart</span> </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <div class="image-container"> <img class="xyz rounded" src="https://pc-gt-cdn.s3.amazonaws.com/menu-images/prod-a/efb9e10c-c561-457d-a76a-93c4ba2a50cc.png" width="200" height="200"> <img class="xyz-replacement rounded" src="https://pc-gt-cdn.s3.amazonaws.com/menu-images/prod-a/efb9e10c-c561-457d-a76a-93c4ba2a50cc.png" width="200" height="200"> </div>
+                            <h5>Pizza</h5>
+                            <div class="mt-3 info"> <span class="text1 d-block">Pizza grande de cualquier especialidad</span> <span class="text1">delux, carnes, margarita o hawaiana</span> </div>
+                            <div class=" tshirtcost mt-3 text-dark"> <span>Q100</span>
+                                <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                            </div>
+                        </div>
+                        <div class=" tshirt p-3 text-center text-white mt-3 cursor cart"> <span class="text-uppercase cart-text" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="guardar_temp('Pizza grande',100)">Add to cart</span> </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <div class="image-container"> <img class="xyz rounded" src="https://media-cdn.tripadvisor.com/media/photo-p/11/e1/a0/da/fresh-fire-grilled-chicken.jpg" width="200" height="200"> <img class="xyz-replacement rounded" src="https://media-cdn.tripadvisor.com/media/photo-p/11/e1/a0/da/fresh-fire-grilled-chicken.jpg" width="200" height="200"> </div>
+                            <h5>Pollo Rostizado</h5>
+                            <div class="mt-3 info"> <span class="text1 d-block">Menu de 8 piezas de pollo con pure de papa, enzaladar y 2lt de pepsi</span></div>
+                            <div class=" tshirtcost mt-3 text-dark"> <span>Q250</span>
+                                <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                            </div>
+                        </div>
+                        <div class=" tshirt p-3 text-center text-white mt-3 cursor cart"> <span class="text-uppercase cart-text" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="guardar_temp('Pollo Rostizad',250)">Add to cart</span> </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <div class="image-container"> <img class="xyz rounded" src="https://cdn.tictuk.com/7229788946028976/88db0e0e-de5c-4df3-e79a-4e5214c8aa76.jpeg?a=041547d4-0d92-e59c-8ec4-c7f3a7caeabb" width="200" height="200"> <img class="xyz-replacement rounded" src="https://cdn.tictuk.com/7229788946028976/88db0e0e-de5c-4df3-e79a-4e5214c8aa76.jpeg?a=041547d4-0d92-e59c-8ec4-c7f3a7caeabb" width="200" height="200"> </div>
+                            <h5>Burrito</h5>
+                            <div class="mt-3 info"> <span class="text1 d-block">Menu de burrito especial</span> <span class="text1">incluye papas fritas y soda. </span> </div>
+                            <div class=" tshirtcost mt-3 text-dark"> <span>Q25</span>
+                                <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                            </div>
+                        </div>
+                        <div class=" tshirt p-3 text-center text-white mt-3 cursor cart"> <span class="text-uppercase cart-text" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="guardar_temp('burrito',25)">Add to cart</span> </div>
+                    </div>
+                </div>
+                <br>
+                
+        </div>
+    </div>
+</div>
+<div class="bt">
+    <button type="button bt" class="btn btn-outline-warning" (click)="completar_compra()">Completar Pedido</button>
+</div>
+<div class="bt">
+    <button type="button bt" class="btn btn-outline-warning" (click)="ver_pedido()">Ver estado</button>
+</div>
+<div>
+    <label for="formGroupExampleInput" class="form-label">Pedido realizado a:  </label>
+    <p></p>
+    <label for="formGroupExampleInput" class="form-label" style="color: cornflowerblue;"> {{url}}</label>
+</div>
+<br>
+</div>
+
+<!-- Footer -->
+<div class="ft">
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-dark" >Grupo F - SA diciembre 2021</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
+<!-- Footer -->
+
+<!--MODAL-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cantidad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <input type="number" [(ngModel)]='cantidad'>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="agregar_carrito()">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>

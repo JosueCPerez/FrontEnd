@@ -1,0 +1,49 @@
+<nav class="navbar navbar-light bg-light">
+    <form class="container-fluid justify-content-start">
+      <button class="btn btn-sm btn-outline-danger" type="button" (click)="inicio()">Sallir</button>
+    </form>
+  </nav>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <div class="container mb-5 mt-3">
+            <h1 class="title text-center">Pedido #{{id_pedido}}</h1>
+            <div >
+                <div class="card card-timeline px-2 border-none">
+                    <ul class="bs4-order-tracking">
+                        <li class={{activo_1}}>
+                            <div><i class="fas fa-user"></i></div> PEDIDO EXITOSO 
+                        </li>
+                        <li class={{activo_2}}>
+                            <div><i class="fas fa-bread-slice"></i></div> TERMINADO
+                        </li>
+                        <li class={{activo_3}}>
+                            <div><i class="fas fa-truck"></i></div> EN CAMINO
+                        </li>
+                        <li class={{activo_4}}>
+                            <div><i class="fas fa-birthday-cake"></i></div> ENTREGADO
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <label for="formGroupExampleInput" class="form-label">peditcion realizada a:  </label>
+        <p></p>
+        <label for="formGroupExampleInput" class="form-label" style="color: cornflowerblue;"> {{url}}</label>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="ft">
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-dark" >Grupo F - SA diciembre 2021</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
+<!-- Footer -->
+
